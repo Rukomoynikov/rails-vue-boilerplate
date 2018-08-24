@@ -11,5 +11,8 @@
 </script>
 
 <style scoped>
-
+  div {
+    height: 50px;
+    background: yellow;
+  }
 </style>
