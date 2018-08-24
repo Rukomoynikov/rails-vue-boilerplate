@@ -2,17 +2,21 @@
   "name": "vue_rails_not_spa",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue app/javascript",
-    "eslint": "eslint"
+    "lint:js": "eslint --ext .js,.vue app/javascript",
+    "lint:css": "stylelint 'app/javascript/**/*.vue'"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-processor-html": "^1.0.0",
     "vue": "^2.5.17",
     "vue-loader": "14.2.2",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.17"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "eslint": "^4.15.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-config-standard": "^10.2.1",
@@ -25,7 +29,6 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.0.0",
     "prettier": "^1.14.2",
-    "webpack-dev-server": "2.11.2",
-    "babel-eslint": "^8.2.6"
+    "webpack-dev-server": "2.11.2"
   }
 }
