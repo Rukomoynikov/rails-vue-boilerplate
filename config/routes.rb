@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   scope '/api' do
-    resources :drinks
+    resources :suppliers, only: [:index, :show]
+    resources :customers, only: [:index, :show]
   end
 
   root to: 'pages#index'
