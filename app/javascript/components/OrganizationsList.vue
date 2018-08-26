@@ -1,47 +1,49 @@
 <template>
-  <div>
-    <div class="listHeader">
-      <div class="listHeader__item">
-        Наименование
-      </div>
-      <div class="listHeader__item">
-        ИНН
-      </div>
-      <div class="listHeader__item">
-        КПП
-      </div>
-      <div class="listHeader__item">
-        Регион
-      </div>
-      <div class="listHeader__item">
-        Заявок
-      </div>
-      <div class="listHeader__item">
-        Побед
-      </div>
-    </div>
-    <div class="listBody">
-        <div v-for="organization in organizations" :key="organization.ogrn" class="listBody__row">
-          <div class="listBody__item">
-            {{ organization.name }}
-          </div>
-          <div class="listBody__item">
-            {{ organization.inn }}
-          </div>
-          <div class="listBody__item">
-            {{ organization.kpp }}
-          </div>
-          <div class="listBody__item">
-            {{ organization.region_name }}
-          </div>
-          <div class="listBody__item">
-            {{ organization.supplier_count_lot_apps }}
-          </div>
-          <div class="listBody__item">
-            {{ organization.supplier_count_wins }}
-          </div>
-        </div>
-      </div>
+  <div class="container">
+
+    <table class="table is-hoverable is-fullwidth" v-if="organizations">
+      <thead>
+        <tr>
+          <th>Наименование</th>
+          <th>ИНН</th>
+          <th>КПП</th>
+          <th>Регион</th>
+          <th>Заявок</th>
+          <th>Побед</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr v-for="organization in organizations" :key="organization.ogrn">
+          <td>{{ organization.name }}</td>
+          <td>{{ organization.inn }}</td>
+          <td>{{ organization.kpp }}</td>
+          <td>{{ organization.region_name }}</td>
+          <td>{{ organization.supplier_count_lot_apps }}</td>
+          <td>{{ organization.supplier_count_wins }}</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <nav class="pagination" role="navigation" aria-label="pagination">
+          <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+          <a class="pagination-next">Next page</a>
+          <ul class="pagination-list">
+            <li>
+              <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+            </li>
+            <li>
+              <a class="pagination-link" aria-label="Goto page 2">2</a>
+            </li>
+            <li>
+              <a class="pagination-link" aria-label="Goto page 3">3</a>
+            </li>
+          </ul>
+        </nav>
+
+      </tfoot>
+
+    </table>
   </div>
 </template>
 

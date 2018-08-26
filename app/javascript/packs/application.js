@@ -8,6 +8,8 @@ import App from '../app.vue'
 import router from '../router/index.js'
 import store from '../store/index.js'
 
+import('bulma/bulma.sass')
+
 Vue.use(VueRouter)
 Vue.use(Vuex)
 

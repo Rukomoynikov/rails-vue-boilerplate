@@ -23,9 +23,4 @@ export default {
     this.$store.dispatch('getSuppliers')
   }
 }
-
 </script>
-
-<style scoped>
-
-</style>
