@@ -1,7 +1,6 @@
 <template>
   <div>
     <OrganizationsList
-      v-if="suppliers"
       :organizations="suppliers" />
   </div>
 </template>

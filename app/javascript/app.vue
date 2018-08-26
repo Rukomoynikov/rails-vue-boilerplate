@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
-    <Navigation />
-    <router-view/>
+  <div id="app" v-cloak>
+    <transition>
+      <Navigation />
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -21,5 +23,9 @@ export default {
 p {
   font-size: 2em;
   text-align: center;
+}
+
+[v-cloak] {
+  display: none;
 }
 </style>

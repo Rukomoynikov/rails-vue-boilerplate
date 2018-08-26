@@ -15,6 +15,11 @@ const routes = [
     path: '/suppliers',
     component: () => import('../components/pages/Suppliers.vue'),
     name: 'Suppliers'
+  },
+  {
+    path: '/suppliers/:id',
+    component: () => import('../components/pages/Supplier.vue'),
+    name: 'Supplier'
   }
 ]
 

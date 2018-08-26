@@ -1,7 +1,11 @@
 <template>
   <div class="container">
+    <div v-if="!organizations">
+      Загрузка организаций
+    </div>
 
-    <table class="table is-hoverable is-fullwidth" v-if="organizations">
+    <table v-if="organizations"
+           class="table is-hoverable is-fullwidth">
       <thead>
         <tr>
           <th>Наименование</th>
