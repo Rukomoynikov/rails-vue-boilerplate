@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   scope '/api' do
-    resources :suppliers, only: [:index, :show]
+    resources :suppliers do
+      get :apps, on: :member
+    end
     resources :customers, only: [:index, :show]
   end
 
