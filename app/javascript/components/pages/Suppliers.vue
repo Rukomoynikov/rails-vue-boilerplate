@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     suppliers () {
-      return this.$store.state.suppliers && this.$store.state.suppliers.data
+      return this.$store.state.suppliers && this.$store.state.suppliers.data || []
     }
   },
   mounted () {

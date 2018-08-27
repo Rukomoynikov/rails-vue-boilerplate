@@ -1,9 +1,7 @@
 <template>
   <div id="app" v-cloak>
-    <transition>
-      <Navigation />
-      <router-view/>
-    </transition>
+    <Navigation />
+    <router-view/>
   </div>
 </template>
 
