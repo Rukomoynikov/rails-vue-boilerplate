@@ -14,6 +14,7 @@
           <th>Регион</th>
           <th>Заявок</th>
           <th>Побед</th>
+          <th>Статистика</th>
         </tr>
       </thead>
 
@@ -29,28 +30,9 @@
           <td>{{ organization.region_name }}</td>
           <td>{{ organization.supplier_count_lot_apps }}</td>
           <td>{{ organization.supplier_count_wins }}</td>
+          <td>{{ organization.net_profit }}</td>
         </tr>
       </tbody>
-
-      <tfoot>
-        <nav class="pagination" role="navigation" aria-label="pagination">
-          <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
-          <a class="pagination-next">Next page</a>
-          <ul class="pagination-list">
-            <li>
-              <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 2">2</a>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 3">3</a>
-            </li>
-          </ul>
-        </nav>
-
-      </tfoot>
-
     </table>
   </div>
 </template>

@@ -2,16 +2,19 @@
   <div>
     <OrganizationsList
       :organizations="suppliers" />
+    <Pagination />
   </div>
 </template>
 
 <script>
 import OrganizationsList from '../OrganizationsList.vue'
+import Pagination from '../Pagination'
 
 export default {
   name: 'Suppliers',
   components: {
-    OrganizationsList
+    OrganizationsList,
+    Pagination
   },
   computed: {
     suppliers () {
