@@ -33,7 +33,7 @@
           <td>{{ organization.region_name }}</td>
           <td>{{ organization.supplier_count_lot_apps }}</td>
           <td>{{ organization.supplier_count_wins }}</td>
-          <td>{{ organization.net_profit }}</td>
+          <td> <SparkLine :values="organization.net_profit" v-if="organization.net_profit" /></td>
         </tr>
       </tbody>
     </table>
@@ -41,9 +41,13 @@
 </template>
 
 <script>
+import SparkLine from './SparkLine'
 
 export default {
   name: 'OrganizationsList',
+  components: {
+    SparkLine
+  },
   props: {
     organizations: {
       type: Array,
