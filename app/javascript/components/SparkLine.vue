@@ -1,5 +1,7 @@
 <template>
-  <svg width="500" height="270">
+  <svg
+    width="500"
+    height="270">
     <g style="transform: translate(0, 10px)">
       <path :d="line" />
     </g>
@@ -15,10 +17,12 @@ export default {
     values: {
       type: Object,
       require: true,
-      default: []
+      default () {
+        return []
+      }
     }
   },
-  mounted() {
+  mounted () {
     this.calculatePath()
   },
   methods: {

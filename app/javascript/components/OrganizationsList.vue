@@ -4,8 +4,9 @@
       Загрузка организаций
     </div>
 
-    <table v-if="organizations.length"
-           class="table is-hoverable is-fullwidth">
+    <table
+      v-if="organizations.length"
+      class="table is-hoverable is-fullwidth">
       <thead>
         <tr>
           <th>Наименование</th>
@@ -19,7 +20,9 @@
       </thead>
 
       <tbody>
-        <tr v-for="organization in organizations" :key="organization.ogrn">
+        <tr
+          v-for="organization in organizations"
+          :key="organization.ogrn">
           <td>
             <router-link :to="{ name: 'Supplier', params: { id: organization.id} }">
               {{ organization.name }}

@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     supplierURL () {
-      return `/api/suppliers/${ this.$route.params.id }/apps`
+      return `/api/suppliers/${this.$route.params.id}/apps`
     }
   },
   mounted () {

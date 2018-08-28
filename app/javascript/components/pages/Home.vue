@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img :src="require('assets/images/header_logo.png')" />
+    <img :src="require('assets/images/header_logo.png')" >
     <br>
     Аналитика всех этапов закупочного процесса по 44-ФЗ и 223-ФЗ
   </div>

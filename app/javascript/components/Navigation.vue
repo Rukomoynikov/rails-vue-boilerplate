@@ -11,12 +11,12 @@
           TradeInspect
         </router-link>
         <a
-           role="button"
-           :class="{ 'is-active': isMenuVisible }"
-           class="navbar-burger"
-           aria-label="menu"
-           aria-expanded="false"
-           @click="toggleMenu">
+          :class="{ 'is-active': isMenuVisible }"
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          @click="toggleMenu">
           <span aria-hidden="true"/>
           <span aria-hidden="true"/>
           <span aria-hidden="true"/>
