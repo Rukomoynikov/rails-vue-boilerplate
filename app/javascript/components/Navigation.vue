@@ -1,35 +1,42 @@
 <template>
-    <nav class="navbar is-dark is-fixed-top"
-         role="navigation"
-         aria-label="main navigation">
-      <div class="container">
+  <nav
+    class="navbar is-dark is-fixed-top"
+    role="navigation"
+    aria-label="main navigation">
+    <div class="container">
       <div class="navbar-brand">
-        <router-link :to="{ name: 'Home'}" class="navbar-item">
+        <router-link
+          :to="{ name: 'Home'}"
+          class="navbar-item">
           TradeInspect
         </router-link>
-        <a role="button"
+        <a
+           role="button"
+           :class="{ 'is-active': isMenuVisible }"
            class="navbar-burger"
            aria-label="menu"
            aria-expanded="false"
            @click="toggleMenu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          <span aria-hidden="true"/>
+          <span aria-hidden="true"/>
+          <span aria-hidden="true"/>
         </a>
       </div>
 
-      <div class="navbar-menu" :style="{ display: isMenuVisible ? 'block' : 'none' }">
+      <div
+        :class="{ 'is-active': isMenuVisible }"
+        class="navbar-menu">
         <div class="navbar-end">
           <router-link
-            class="navbar-item"
-            :to="{ name: 'Customers'}">Заказчики</router-link>
+            :to="{ name: 'Customers'}"
+            class="navbar-item">Заказчики</router-link>
           <router-link
-            class="navbar-item"
-            :to="{ name: 'Suppliers'}">Поставщики</router-link>
+            :to="{ name: 'Suppliers'}"
+            class="navbar-item">Поставщики</router-link>
         </div>
       </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -37,7 +44,7 @@ export default {
   name: 'Navigation',
   data () {
     return {
-      isMenuVisible: true
+      isMenuVisible: false
     }
   },
   methods: {

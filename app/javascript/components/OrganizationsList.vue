@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-if="!organizations">
+    <div v-if="!organizations.length">
       Загрузка организаций
     </div>
 
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'OrganizationsList',
   props: {
