@@ -2,7 +2,9 @@
   <div class="container">
     <OrganizationsList
       :organizations="suppliers" />
-    <Pagination v-if="suppliers.length" />
+    <Pagination
+      v-model='selectedPage'
+      v-if="suppliers.length" />
   </div>
 </template>
 
@@ -15,6 +17,18 @@ export default {
   components: {
     OrganizationsList,
     Pagination
+  },
+  data () {
+    return {
+      selectedPage: 0
+    }
+  },
+  watch: {
+    selectedPage (oldVal, nextVal) {
+      this.$store.dispatch('getSuppliers', {
+        start: this.selectedPage * 50
+      })
+    }
   },
   computed: {
     suppliers () {

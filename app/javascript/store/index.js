@@ -14,9 +14,8 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    getSuppliers (context) {
-      // axios.get('/api/suppliers.json')
-      axios.get('/api/suppliers').then((result) => {
+    getSuppliers (context, requestParamas = {}) {
+      axios.get('/api/suppliers', {params: requestParamas}).then((result) => {
         context.commit('LOAD_SUPPLIERS', result.data)
       })
     }

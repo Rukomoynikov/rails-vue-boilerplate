@@ -1,6 +1,6 @@
 class SuppliersController < ApplicationController
   def index
-    uri = URI('https://tradeinspect.ru/organization/suppliers.json')
+    uri = URI("https://tradeinspect.ru/organization/suppliers.json?#{ suppliers_params.to_query }")
     data = Net::HTTP.get_response(uri).body.force_encoding("UTF-8")
 
     render json: data
@@ -18,5 +18,11 @@ class SuppliersController < ApplicationController
     data = Net::HTTP.get_response(uri).body.force_encoding("UTF-8")
 
     render json: data
+  end
+
+  private
+
+  def suppliers_params
+    params.permit(:start)
   end
 end
