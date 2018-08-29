@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="container">
     <OrganizationsList
       :organizations="suppliers" />
-    <Pagination />
+    <Pagination v-if="suppliers.length" />
   </div>
 </template>
 

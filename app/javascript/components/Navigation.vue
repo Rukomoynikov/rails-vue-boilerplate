@@ -25,7 +25,8 @@
 
       <div
         :class="{ 'is-active': isMenuVisible }"
-        class="navbar-menu">
+        class="navbar-menu"
+        @click="hideMenu">
         <div class="navbar-end">
           <router-link
             :to="{ name: 'Customers'}"
@@ -50,6 +51,11 @@ export default {
   methods: {
     toggleMenu () {
       this.isMenuVisible = !this.isMenuVisible
+    },
+    hideMenu () {
+      if (this.isMenuVisible) {
+        this.isMenuVisible = false
+      }
     }
   }
 }

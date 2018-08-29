@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div v-if="!organizations.length">
       Загрузка организаций
     </div>
@@ -33,7 +33,9 @@
           <td>{{ organization.region_name }}</td>
           <td>{{ organization.supplier_count_lot_apps }}</td>
           <td>{{ organization.supplier_count_wins }}</td>
-          <td> <SparkLine :values="organization.net_profit" v-if="organization.net_profit" /></td>
+          <td> <SparkLine
+            v-if="organization.net_profit"
+            :points="organization.net_profit" /></td>
         </tr>
       </tbody>
     </table>
