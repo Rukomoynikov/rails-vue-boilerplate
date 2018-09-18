@@ -1,24 +1,14 @@
-# README
+Соответствие полей в выдаче организаций:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- capital	 s_13003 колонка из таблички src_finance (ИТОГО капитал на конец отчетного года)
+- etp_ids_as_customer	 список айдишников этп, где компания является заказчиком
+- etp_ids_as_supplier	 список айдишников этп, где компания является поставщиком
+- income	s_21103 колонка из таблички src_finance (Выручка)
+- long_term_obligations	 s_14103 колонка из таблички src_finance (Долгосрочные заемные средства на конец
+- net_profit	s_24003 колонка из таблички src_finance (Чистая прибыль)
+- lots_sum_price	 суммарная стоимость по нмц лотов, где организация является заказчиком
+	 
+- total_long_term_obligations	 s_14003 колонка из таблички src_finance (ИТОГО долгосрочных обязательств на конец отчетного года)
+- total_short_term_obligations	 s_15003 колонка из таблички src_finance (ИТОГО краткосрочных обязательств на конец отчетного года)
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
